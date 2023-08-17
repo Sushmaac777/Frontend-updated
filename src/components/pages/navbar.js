@@ -1,7 +1,8 @@
 
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
+import '../css/navbar.css';
+import { FaHome, FaKey} from 'react-icons/fa';
 
 
 const NavigationBar = () => {
@@ -24,10 +25,8 @@ const NavigationBar = () => {
   
   return (
     <nav className="navbar">
-      <ul className="nav-list">
-      <li className="nav-item home-icon"><Link to="/"
-      >
-        <img src="./images/chabi.jpg" height={40}  width={200} alt="Home" /></Link></li>
+      <div className="nav-list">
+        <li className="nav-item home-icon"><Link to="/"><FaHome  color='Red' size={40}/><FaKey color='Red' size={30}/>KoTha</Link></li>
         <li className="nav-item"><Link to="/">Home</Link></li>
         <li className="nav-item"><Link to="/available-room">Available Rooms</Link></li>
         <li className="nav-item"><Link to="/about">About Us</Link></li>
@@ -71,7 +70,7 @@ const NavigationBar = () => {
         <li className="nav-item">
           <Link to="/profile">Profile</Link>
         </li>
-      </ul>
+      </div>
     </nav>
   );
 };
